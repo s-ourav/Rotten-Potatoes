@@ -1,0 +1,87 @@
+.home-container{
+    display: flex;
+
+    .all-movies{
+        width: 75%;
+        min-height: calc(100vh - 80px) ;
+        border-right: 1px solid black;
+       
+        .top{
+            display:flex;
+            background-color: rgb(158, 9, 9);
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            h4{
+                text-transform: uppercase;
+                font-weight: bold;
+                color: coral;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                /* border-left:5px solid black; */
+            }
+        }
+        .movies-thumbnail{
+            display:flex;
+            justify-content: space-between;
+            margin: 5px 0px 0px 30px;
+            .movie{
+                .cover{
+                    cursor: pointer;
+                    img{
+                        border-radius : 5px;
+
+                    }
+                }
+                .detail{
+                    width:180px;
+                    .name{
+                        font-weight : bold ;
+                        height: 50px;
+                        margin-top: 5px;
+                        cursor: pointer;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .popular-movies{
+        width: 25%;
+        min-height: calc(100vh - 80px);
+        h4{
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-left: 5px;
+            color: coral;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .movies{
+            margin: 10px 10px 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+                .name{
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+        }
+    }
+
+}
+.rating{
+    padding-right : 45px;
+    position: relative;
+    .rating-value {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        font-weight: bold;
+    }
+}
+.view-all{
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(0, 255, 21);
+    text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+<div class="login-container">
+    <img class="film" src="assets/images/film2.jpg" alt="sdsd">
+    <div class="logo">Rotten Potatoes</div>
+    <div class="desc">
+        Rotten potatoes is a movie rating website. It allows users to rate movies and see the average rating of a movie.As the leading movie rating website, Rotten potatoes is the best place to find the best movies and the worst movies.
+    </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">UserName</label>
+            <input type="text" id="uname" class="form-control" placeholder="Enter Username" [(ngModel)]="username">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" class="form-control" placeholder="Enter Password" [(ngModel)]="password" >
+        </div>
+        <div class="btn-container">
+            <div class="error">{{errorMsg}}</div>
+            <button class="btn btn-dark" (click)="login()" >Submit</button>
+        </div>
+    </div>
+    
+
+</div>
