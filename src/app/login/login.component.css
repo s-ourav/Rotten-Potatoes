@@ -14,14 +14,14 @@
     right:50px;
 }
 .desc{
-    font-size: 34px;
+    font-size: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 5px;
     position: absolute;
-    top:200px;
-    right:100px;
+    top:150px;
+    right:50px;
     text-align: right;
-    width: 1000px;
+    width: 800px;
 }
 .film{
     position: absolute;
