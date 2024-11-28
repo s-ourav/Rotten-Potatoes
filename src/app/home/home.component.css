@@ -23,7 +23,7 @@
         .movies-thumbnail{
             display:flex;
             justify-content: space-between;
-            margin: 5px 0px 0px 30px;
+            margin: 5px 0px 0px 0px;
             .movie{
                 .cover{
                     cursor: pointer;
