@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
-.header-container{
-    position : relative;
+
+.header-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,15 +11,16 @@
     padding: 10px;
     font-size: large;
     font-weight: bold;
+}
 
-    .logo{
-        font-family: 'Merienda', cursive;
-        font-size: 30px;
-        color: #360404;
-        cursor: pointer;
-    }
-    .logout{
-        margin: 10px;
-        cursor: pointer;
-    }
+.header-container .logo {
+    font-family: 'Merienda', cursive;
+    font-size: 30px;
+    color: #360404;
+    cursor: pointer;
+}
+
+.header-container .logout {
+    margin: 10px;
+    cursor: pointer;
 }
