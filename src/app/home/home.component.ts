@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+
  @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,22 +20,25 @@ export class HomeComponent implements OnInit {
     this.getPopularMovies();
   }
 
-  getTrendingMovies(){
-    this.http.get('http://localhost:4200/assets/data/trending-movies.json').subscribe((movies) =>{
-      this.trendingMovies=movies;
-    })
-  }
-  
-  getTheatreMovies(){
-    this.http.get('http://localhost:4200/assets/data/theatre-movies.json').subscribe((movies) =>{
-      this.theatreMovies=movies;
-    })
+  getTrendingMovies() {
+    this.http.get(`${environment.baseUrl}/assets/data/trending-movies.json`)
+      .subscribe((movies) => {
+        this.trendingMovies = movies;
+      });
   }
 
-  getPopularMovies () {
-    this.http.get('http://localhost:4200/assets/data/popular-movies.json').subscribe((movies) =>{
-      this.popularMovies=movies;
-    })
+  getTheatreMovies() {
+    this.http.get(`${environment.baseUrl}/assets/data/theatre-movies.json`)
+      .subscribe((movies) => {
+        this.theatreMovies = movies;
+      });
+  }
+
+  getPopularMovies() {
+    this.http.get(`${environment.baseUrl}/assets/data/popular-movies.json`)
+      .subscribe((movies) => {
+        this.popularMovies = movies;
+      });
   }
 
   goToMovie(type : String , id : String){
