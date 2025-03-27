@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { log } from 'console';
-
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
@@ -20,11 +20,11 @@ export class MovieComponent implements OnInit {
     this.type=this.route.snapshot.params['type'];
     this.id=this.route.snapshot.params['id'];
     if (this.type === 'trending') {
-        this.url = "/assets/data/trending-movies.json";
+        this.url = `${environment.baseUrl}/assets/data/trending-movies.json`;
     } else if (this.type === 'theatre') {
-        this.url = "/assets/data/theatre-movies.json";
+        this.url = `${environment.baseUrl}/assets/data/theatre-movies.json`;
     } else if (this.type === 'popular') {
-        this.url = "/assets/data/popular-movies.json";
+        this.url = `${environment.baseUrl}/assets/data/popular-movies.json`;
     }
     this.getMovie();
   }

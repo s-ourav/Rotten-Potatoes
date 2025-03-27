@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: ''  // Same as above; Angular handles `/assets/` automatically
 };

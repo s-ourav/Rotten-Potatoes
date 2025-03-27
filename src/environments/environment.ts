@@ -3,8 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: ''  // Empty for localhost as Angular auto-serves `/assets/`
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
