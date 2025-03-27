@@ -19,14 +19,12 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
     this.type=this.route.snapshot.params['type'];
     this.id=this.route.snapshot.params['id'];
-    if(this.type=='trending'){
-      this.url = "http://localhost:4200/assets/data/trending-movies.json";
-    }
-    else if(this.type=='theatre'){
-      this.url = "http://localhost:4200/assets/data/theatre-movies.json";
-    }
-    else if(this.type=='popular'){
-      this.url = "http://localhost:4200/assets/data/popular-movies.json";
+    if (this.type === 'trending') {
+        this.url = "/assets/data/trending-movies.json";
+    } else if (this.type === 'theatre') {
+        this.url = "/assets/data/theatre-movies.json";
+    } else if (this.type === 'popular') {
+        this.url = "/assets/data/popular-movies.json";
     }
     this.getMovie();
   }
@@ -46,7 +44,7 @@ export class MovieComponent implements OnInit {
       }
       console.log(this.movie);
     })
-    
+
   }
 
 }
